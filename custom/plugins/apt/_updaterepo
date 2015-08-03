@@ -1,0 +1,4 @@
+#compdef updaterepo
+local sources
+sources=("${(@f)$(find /etc/apt/sources.list.d -name "*$1*.list" -exec basename {} \; 2>/dev/null)}")
+_describe 'source files' sources
